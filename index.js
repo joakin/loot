@@ -60,7 +60,16 @@ function restbaseReqHandler (transform) {
 }
 
 router.addRoute('/raw/:title', restbaseReqHandler())
+router.addRoute('/noimages/:title', restbaseReqHandler(noimages))
 router.addRoute('/slim/:title', restbaseReqHandler(slim))
+
+function noimages (res) {
+  var stream = trumpet()
+  removeImages(stream)
+  removeStyles(stream)
+  res.pipe(stream)
+  return stream
+}
 
 function slim (res) {
   var stream = trumpet()
