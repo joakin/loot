@@ -68,6 +68,7 @@ function slim (res) {
   removeTables(stream)
   removeDataMW(stream)
   removeStyles(stream)
+  removeReferences(stream);
   res.pipe(stream)
   return stream
 }
@@ -88,4 +89,8 @@ function removeStyles (s) {
   s.selectAll('body', (el) => el.createReadStream().pipe(process.stdout))
   s.selectAll('link[rel=stylesheet]', (el) => el.createWriteStream({ outer: true }).end(''))
   s.selectAll('style', (el) => el.createWriteStream({ outer: true }).end(''))
+}
+
+function removeReferences (s) {
+  s.selectAll('[typeof="mw:Extension/references"]', (el) => el.createWriteStream({ outer: true }).end(''))
 }
