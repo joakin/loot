@@ -52,9 +52,7 @@ function restbaseReqHandler (transform) {
             })
             .catch((e) => error(res, e))
         } else {
-          var cacheRes = fs.createReadStream(cache)
-          var transformed = (cacheRes)
-          transformed.pipe(res)
+          fs.createReadStream(cache).pipe(res)
         }
       })
     })
@@ -69,6 +67,7 @@ function slim (res) {
   removeImages(stream)
   removeTables(stream)
   removeDataMW(stream)
+  removeStyles(stream)
   res.pipe(stream)
   return stream
 }
@@ -83,4 +82,10 @@ function removeTables (s) {
 
 function removeDataMW (s) {
   s.selectAll('[data-mw]', (el) => el.removeAttribute('data-mw'))
+}
+
+function removeStyles (s) {
+  s.selectAll('body', (el) => el.createReadStream().pipe(process.stdout))
+  s.selectAll('link[rel=stylesheet]', (el) => el.createWriteStream({ outer: true }).end(''))
+  s.selectAll('style', (el) => el.createWriteStream({ outer: true }).end(''))
 }
