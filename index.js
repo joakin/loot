@@ -95,7 +95,6 @@ function removeDataMW (s) {
 }
 
 function removeStyles (s) {
-  s.selectAll('body', (el) => el.createReadStream().pipe(process.stdout))
   s.selectAll('link[rel=stylesheet]', (el) => el.createWriteStream({ outer: true }).end(''))
   s.selectAll('style', (el) => el.createWriteStream({ outer: true }).end(''))
 }
