@@ -13,5 +13,5 @@ mkdirp('./cache', function (err) {
     var match = router.match(path)
     if (match) match.fn(req, res, match)
     else { res.statusCode = 404; res.end('nope') }
-  }).listen(7001)
+  }).listen(process.env.PORT || 7001)
 })
