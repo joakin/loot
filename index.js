@@ -82,23 +82,19 @@ function slim (res) {
   return stream
 }
 
-function removeImages (s) {
-  s.selectAll('img', (img) => img.createWriteStream({ outer: true }).end(''))
+function removeAll (stream, selector) {
+  stream.selectAll(selector, (el) => el.createWriteStream({ outer: true }).end(''))
 }
 
-function removeTables (s) {
-  s.selectAll('table', (table) => table.createWriteStream({ outer: true }).end(''))
+function removeImages (s) { removeAll(s, 'img') }
+function removeTables (s) { removeAll(s, 'table') }
+function removeReferences (s) { removeAll(s, '[typeof="mw:Extension/references"]') }
+
+function removeStyles (s) {
+  removeAll(s, 'link[rel=stylesheet]')
+  removeAll(s, 'style')
 }
 
 function removeDataMW (s) {
   s.selectAll('[data-mw]', (el) => el.removeAttribute('data-mw'))
-}
-
-function removeStyles (s) {
-  s.selectAll('link[rel=stylesheet]', (el) => el.createWriteStream({ outer: true }).end(''))
-  s.selectAll('style', (el) => el.createWriteStream({ outer: true }).end(''))
-}
-
-function removeReferences (s) {
-  s.selectAll('[typeof="mw:Extension/references"]', (el) => el.createWriteStream({ outer: true }).end(''))
 }
