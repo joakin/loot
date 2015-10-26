@@ -13,4 +13,6 @@ node server that proxys restbase
 
 `node index.js`
 
-Use `nodemon` for extra pleasure.
+Running the server with [nodemon](https://github.com/remy/nodemon), i.e.
+`nodemon` (or `nodemon index.js`), eases the development experience by clearing
+the cache whenever the process is restarted.
