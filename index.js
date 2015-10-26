@@ -5,8 +5,10 @@ var mkdirp = require('mkdirp')
 var router = require('./lib/routes')
 
 mkdirp('./cache', function (err) {
+  // Ensure that the cache directory exists.
   if (err) throw err
   http.createServer((req, res) => {
+    // Route request to corresponding endpoint
     var path = url.parse(req.url).pathname
     var match = router.match(path)
     if (match) match.fn(req, res, match)
