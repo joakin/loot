@@ -1,6 +1,8 @@
 loot
 ====
 
+[![Join the chat at https://gitter.im/joakin/loot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joakin/loot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 node server that proxys restbase
 
 ## Endpoints
