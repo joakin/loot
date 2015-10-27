@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "author": "Joaquin Oltra <joaquin@chimeces.com> (http://chimeces.com)",
   "license": "ISC",
@@ -14,5 +14,8 @@
     "routes": "^2.1.0",
     "sanitize-filename": "^1.4.5",
     "trumpet": "^1.7.2"
+  },
+  "devDependencies": {
+    "standard": "^5.3.1"
   }
 }
