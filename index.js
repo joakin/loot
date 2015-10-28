@@ -4,6 +4,8 @@ var mkdirp = require('mkdirp')
 
 var router = require('./lib/routes')
 
+var port = process.env.PORT || 7001
+
 mkdirp('./cache', function (err) {
   // Ensure that the cache directory exists.
   if (err) throw err
@@ -13,5 +15,5 @@ mkdirp('./cache', function (err) {
     var match = router.match(path)
     if (match) match.fn(req, res, match)
     else { res.statusCode = 404; res.end('nope') }
-  }).listen(process.env.PORT || 7001)
+  }).listen(port, () => console.log('Listening at', port))
 })
