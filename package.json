@@ -23,5 +23,6 @@
   "devDependencies": {
     "nodemon": "^1.8.0",
     "standard": "^5.3.1"
+    "libxmljs": "^0.15.0"
   }
 }
