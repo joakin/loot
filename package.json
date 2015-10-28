@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "standard": "^5.3.1",
-    "benchmark": "^1.0.0"
+    "benchmark": "^1.0.0",
+    "libxmljs": "^0.15.0"
   }
 }
