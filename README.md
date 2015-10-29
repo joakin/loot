@@ -11,8 +11,6 @@ node server that proxys restbase
 
 ## Dev
 
-`node index.js`
+* `npm install` to get the dependencies.
+* `npm start` to run the server in development.
 
-Running the server with [nodemon](https://github.com/remy/nodemon), i.e.
-`nodemon` (or `nodemon index.js`), eases the development experience by clearing
-the cache whenever the process is restarted.
