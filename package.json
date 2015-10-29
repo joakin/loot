@@ -17,6 +17,7 @@
     "trumpet": "^1.7.2"
   },
   "devDependencies": {
+    "nodemon": "^1.8.0",
     "standard": "^5.3.1"
   }
 }
