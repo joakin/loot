@@ -5,9 +5,10 @@ node server that proxys restbase
 
 ## Endpoints
 
-`/raw/[title]`
+### Api
 
-`/slim/[title]`
+`/api/raw/html/[title]`
+`/api/slim/html/[title]`
 
 ## Dev
 
