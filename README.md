@@ -7,8 +7,8 @@ node server that proxys restbase
 
 ### Api
 
-`/api/raw/html/[title]`
-`/api/slim/html/[title]`
+`/raw/html/[title]`
+`/slim/html/[title]`
 
 ## Dev
 
