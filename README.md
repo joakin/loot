@@ -1,7 +1,8 @@
 loot
 ====
 
-node server that proxys restbase
+A simple Node.js service that aggressively transforms RESTBase content for
+consumption by lightweight web apps.
 
 ## Endpoints
 

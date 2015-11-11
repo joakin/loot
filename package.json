@@ -1,7 +1,7 @@
 {
   "name": "loot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Node.js service that aggressively transforms RESTBase content for consumption by lightweight web apps.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
