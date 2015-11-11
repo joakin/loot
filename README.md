@@ -8,7 +8,6 @@ consumption by lightweight web apps.
 
 ### Api
 
-* `/raw/[title]`
 * `/slim/[title]`
 * `/slim/lead/[title]`
 
