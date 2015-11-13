@@ -17,14 +17,14 @@ The `/slim/[title]` and `/slim/lead/[title]` endpoints respond with JSON in the 
 
 ```json
 {
-  sections: [
+  "sections": [
     {
-      title: "",
-      content: "<p>This is the lead section</p>"
+      "title": "",
+      "content": "<p>This is the lead section</p>"
     },
     {
-      title: "First section",
-      content: "<p>This is the first section</p>"
+      "title": "First section",
+      "content": "<p>This is the first section</p>"
     }
   ]
 }
