@@ -1,5 +1,5 @@
 {
   "events": {
-    "restart": "rm -rf cachedb && rm -r cache/*"
+    "restart": "rm -rf cachedb & rm -r cache/*"
   }
 }
