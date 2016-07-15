@@ -4,6 +4,16 @@ loot
 A simple Node.js service that aggressively transforms RESTBase content for
 consumption by lightweight web apps.
 
+![](https://img.shields.io/badge/status-frozen-blue.png)
+
+## Frozen/Deprecated
+
+This server is not used any more, refer to the following links to an open
+source more production ready service:
+
+* https://en.wikipedia.org/api/rest_v1/?doc
+* https://github.com/wikimedia/mediawiki-services-mobileapps
+
 ## Endpoints
 
 ### Api
