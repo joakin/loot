@@ -31,3 +31,11 @@ Assuming you've got access to the wmflabs instance:
   * `rm -rf loot.git && mkdir loot.git && cd loot.git && git init --bare && cd .. && cp post-receive loot.git/hooks/`
   * After the above, you should be able to `git push wmflabs master` and get
     a new repo that will execute the post-receive hook.
+
+### Auto restarting services
+
+* Use pm2
+* Add log rotation pm2-logrotate
+  * pm2 install pm2-logrotate
+  * pm2 set pm2-logrotate:compress true
+  * pm2 set pm2-logrotate:retain 50

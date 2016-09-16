@@ -14,6 +14,13 @@ source more production ready service:
 * https://en.wikipedia.org/api/rest_v1/?doc
 * https://github.com/wikimedia/mediawiki-services-mobileapps
 
+### Improvements to be done
+
+* Fix space usage
+  * Evict previous cache revisions when getting a new one
+  * Gracefully avoid cache when ENOSPC and log errors
+  * Make the cache LRU and implement periodic eviction
+
 ## Endpoints
 
 ### Api
