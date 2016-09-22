@@ -4,7 +4,7 @@ loot
 A simple Node.js service that aggressively transforms RESTBase content for
 consumption by lightweight web apps.
 
-![](https://img.shields.io/badge/status-frozen-blue.png)
+![](https://img.shields.io/badge/status-frozen-blue.png) ![Project unmaintained](https://img.shields.io/badge/project-unmaintained-red.svg)
 
 ## Frozen/Deprecated
 
